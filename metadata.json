@@ -1,0 +1,6 @@
+{
+  "name": "Pastel Zine Travel",
+  "description": "An illustrated pocket travel zine and itinerary storyboard planner with comic-style timeline, interactive route map, and travel notes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

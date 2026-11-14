@@ -1,0 +1,136 @@
+---
+name: Pastel Zine Travel
+colors:
+  surface: '#fbf8fc'
+  surface-dim: '#dcd9dd'
+  surface-bright: '#fbf8fc'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#f6f3f7'
+  surface-container: '#f0edf1'
+  surface-container-high: '#eae7eb'
+  surface-container-highest: '#e4e1e5'
+  on-surface: '#1b1b1e'
+  on-surface-variant: '#524341'
+  inverse-surface: '#303033'
+  inverse-on-surface: '#f3f0f4'
+  outline: '#857370'
+  outline-variant: '#d7c2be'
+  surface-tint: '#884f44'
+  primary: '#884f44'
+  on-primary: '#ffffff'
+  primary-container: '#ffb5a7'
+  on-primary-container: '#7a443a'
+  inverse-primary: '#feb4a6'
+  secondary: '#356668'
+  on-secondary: '#ffffff'
+  secondary-container: '#b9ecee'
+  on-secondary-container: '#3c6c6e'
+  tertiary: '#4c6544'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#b3cfa7'
+  on-tertiary-container: '#415939'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#ffdad3'
+  primary-fixed-dim: '#feb4a6'
+  on-primary-fixed: '#360e08'
+  on-primary-fixed-variant: '#6c382f'
+  secondary-fixed: '#b9ecee'
+  secondary-fixed-dim: '#9ecfd1'
+  on-secondary-fixed: '#002021'
+  on-secondary-fixed-variant: '#1a4e50'
+  tertiary-fixed: '#ceebc1'
+  tertiary-fixed-dim: '#b2cfa6'
+  on-tertiary-fixed: '#0a2006'
+  on-tertiary-fixed-variant: '#354d2e'
+  background: '#fbf8fc'
+  on-background: '#1b1b1e'
+  surface-variant: '#e4e1e5'
+typography:
+  headline-hero:
+    fontFamily: Space Grotesk
+    fontSize: 28px
+    fontWeight: '700'
+    lineHeight: 34px
+    letterSpacing: -0.02em
+  headline-lg:
+    fontFamily: Space Grotesk
+    fontSize: 22px
+    fontWeight: '700'
+    lineHeight: 28px
+    letterSpacing: -0.01em
+  headline-md:
+    fontFamily: Space Grotesk
+    fontSize: 18px
+    fontWeight: '700'
+    lineHeight: 24px
+  body-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 15px
+    fontWeight: '500'
+    lineHeight: 22px
+  body-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 13px
+    fontWeight: '500'
+    lineHeight: 18px
+  label-code:
+    fontFamily: Space Mono
+    fontSize: 14px
+    fontWeight: '700'
+    lineHeight: 18px
+  label-caption:
+    fontFamily: Space Mono
+    fontSize: 12px
+    fontWeight: '700'
+    lineHeight: 16px
+    letterSpacing: 0.06em
+rounded:
+  sm: 0.25rem
+  DEFAULT: 0.5rem
+  md: 0.75rem
+  lg: 1rem
+  xl: 1.5rem
+  full: 9999px
+spacing:
+  gutter: 0.75rem
+  margin: 1.0rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 0.75rem
+  space-lg: 1rem
+  space-xl: 1.5rem
+---
+
+## 1. Visual Theme and Atmosphere
+The app feels like an illustrated pocket travel zine or indie comic strip. Configured in a clean light mode atmosphere, it utilizes **airy, muted pastels** against a crisp light paper canvas (`#232326` accents). Every screen is structured like a clean storyboard: distinct content blocks sit inside crisp `2px` ink-bordered panels (`#232326`) with solid, offset comic drop shadows (`3px 3px 0px #232326`). 
+The layout prioritizes **speed and low-friction planning**. Keep screens focused on the core itinerary, map route, and essential transit details without promotional banners, aggressive upsells, or cluttered multi-step carousels.
+
+## 2. Color Palette and Roles
+- **Canvas & Surface**: Used for clean light mode backgrounds and subtle map/timeline tracks so pastel cards stand out clearly without eye strain.
+- **Primary Action (`#FFB5A7` Pastel Coral)**: Reserved strictly for primary buttons (e.g., `+ Add Stop`, `Save Trip`) and the active day selector. Always pair with dark ink text to maintain high WCAG contrast.
+- **Semantic Category Tints**:
+  - **Transit & Flights (`#A8DADC` Powder Blue)**: Used for flight tickets, train legs, and route connectors.
+  - **Places & Stays (`#FDE4CF` Buttercream)**: Used for hotel cards, food spots, and sightseeing panels.
+  - **Confirmed & Budget (`#CDEAC0` Sage Mint)**: Used for verified reservations, packing checkmarks, and remaining budget indicators.
+- **Comic Ink**: Used for all text, icons, panel outlines, and hard offset shadows, calibrated for light mode readability.
+
+## 3. Typography Rules
+- **Display & Panel Headers**: Use a geometric, slightly rounded grotesque (`Space Grotesk`) in Bold (`700`) to echo hand-lettered comic titles while remaining crisp on mobile screens.
+- **Body & Itinerary Details**: Use `Plus Jakarta Sans` at `15px` with generous line height (`22px`) for scannable stop descriptions and addresses.
+- **Timestamps, Flight Codes & Prices**: Use `Space Mono` (`12px`–`14px`, uppercase) inside small pill badges to give tickets and schedules a stamped passport feel.
+
+## 4. Component Stylings
+- **Itinerary Panel Cards**: Clean surface background, `2px solid #232326` border, `14px` corner radius, and `3px 3px 0px #232326` hard shadow. Include a pastel header strip or corner sticker badge indicating the time of day.
+- **Primary Pill Buttons**: Full pill shape (`999px` radius), `#FFB5A7` fill, `2px solid #232326` border, bold uppercase label, and `3px 3px 0px #232326` shadow that shifts to `1px 1px 0px` on tap.
+- **Speech-Bubble Tips & Notes**: Use subtle tail pointers on user notes or local travel tips with `#FDE4CF` fill and `1.5px solid #232326` borders.
+- **Day-by-Day Storyboard Timeline**: Connect sequential itinerary cards vertically using a dashed `#232326` ink line (`2px dashed`) with small circular pastel nodes representing transit duration between stops.
+- **Custom Map View**: Style map tiles in light tones, soft sage parks (`#CDEAC0`), and powder blue water (`#A8DADC`), with numbered comic-pin markers.
+
+## 5. Layout Principles & Anti-Patterns (Don'ts)
+- **Comic Grid Rhythm**: Arrange summary stats (Budget, Days, Stops) in asymmetric 2-column comic grid panels separated by `12px` gutters.
+- **Do NOT use soft blurred drop shadows**: All elevation must come from crisp, zero-blur hard offset shadows (`3px 3px 0px #232326`).
+- **Do NOT use neon or high-saturation primaries**: Keep all fills strictly within the desaturated pastel palette.
+- **Do NOT add clutter**: Avoid pop-up cross-sells, dense nested carousels, or redundant confirmation modals during trip creation.

@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --canvas: #fbf8fc;
+    --ink: #232326;
+    --coral: #ffb5a7;
+    --coral-dark: #e89586;
+    --powder: #a8dadc;
+    --butter: #fde4cf;
+    --mint: #cdeac0;
+    --lavender: #e8d7f1;
+    --sand: #f0edf1;
+  }
+
+  body {
+    background-color: var(--canvas);
+    color: var(--ink);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.015em;
+  }
+
+  .font-display {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .font-body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  .font-mono-code {
+    font-family: 'Space Mono', monospace;
+  }
+}
+
+/* Comic / Zine Hard Offset Shadows */
+.comic-shadow-sm {
+  box-shadow: 2px 2px 0px #232326;
+}
+
+.comic-shadow {
+  box-shadow: 3px 3px 0px #232326;
+}
+
+.comic-shadow-lg {
+  box-shadow: 4px 4px 0px #232326;
+}
+
+.comic-shadow-hover {
+  transition: all 0.15s ease-out;
+}
+.comic-shadow-hover:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #232326;
+}
+.comic-shadow-hover:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #232326;
+}
+
+/* Comic Speech Bubble Pointer */
+.speech-bubble-tail {
+  position: relative;
+}
+.speech-bubble-tail::after {
+  content: '';
+  position: absolute;
+  bottom: -9px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 9px solid #fde4cf;
+  z-index: 2;
+}
+.speech-bubble-tail::before {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 18px;
+  width: 0;
+  height: 0;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-top: 11px solid #232326;
+  z-index: 1;
+}
+
+/* Subtle Halftone Dot Pattern for Zine Aesthetic */
+.zine-halftone {
+  background-image: radial-gradient(#232326 0.75px, transparent 0.75px);
+  background-size: 8px 8px;
+  opacity: 0.04;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f0edf1;
+  border-left: 1px solid #232326;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffb5a7;
+  border: 1.5px solid #232326;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e89586;
+}
+
+/* Print Styles for Pocket Zine Booklet */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-page {
+    page-break-after: always;
+  }
+}
